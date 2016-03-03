@@ -11,6 +11,7 @@ use ListGenerator\Exception\MissingHeadings;
 class ListGenerator {
 	public $output;
 	public $nodeList;
+	public $levelPrefix = 'list-level-';
 	private $document;
 	private $nodeArray;
 	private $list;
@@ -161,7 +162,7 @@ class ListGenerator {
 				} else {
 					$target = '#';
 					$li = $this->document->createElement('li');
-					$li->setAttribute('class', 'sg-level-'.$level);
+					$li->setAttribute('class', $this->levelPrefix.$level);
 
 					if ($id = $node->getAttribute('id')) {
 						$target = '#'.$id;
