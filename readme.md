@@ -33,6 +33,8 @@ $output = $list->output();
 echo $output;
 ```
 
+### Output
+
 ```html
 <ul>
   <li class="list-level-2">
